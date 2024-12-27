@@ -7,22 +7,5 @@ import { fetchContacts } from "./redux/operations.js";
 import { useDispatch, useSelector } from "react-redux";
 
 export function App() {
-  const dispatch = useDispatch();
-  const { items, loading, error } = useSelector((state) => state.contacts);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
-  return (
-    <>
-      <h1>Phonebook</h1>
-
-      <ContactForm />
-      <SearchBox />
-      {loading && <b>Loading contacts...</b>}
-      {error && <b>{error}</b>}
-      <ContactList />
-    </>
-  );
+  return <>\</>;
 }
