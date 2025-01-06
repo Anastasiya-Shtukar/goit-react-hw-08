@@ -1,3 +1,11 @@
+import DocumentTitle from "../components/DocumentTitle";
+import css from "./Home.module.css";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <DocumentTitle>Home</DocumentTitle>
+      <div className={css.home}>Home</div>
+    </>
+  );
 }

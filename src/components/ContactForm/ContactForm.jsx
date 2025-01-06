@@ -4,13 +4,21 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/operations";
 import { selectContacts } from "../../redux/selectors";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
+  number: Yup.number()
+    .min(100, "Too Short!")
+    .max(10000000, "Too Long!")
+    .required("Required"),
 });
+
+const notify = () => toast("Oops, looks like contact already exists");
+const addSuccess = () => toast("A new contact has been added");
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -20,9 +28,10 @@ const ContactForm = () => {
 
   const handleSubmit = (values, actions) => {
     if (contactName.includes(values.name)) {
-      alert("Oops, looks like contact already exists");
+      notify();
     } else {
       dispatch(addContact(values));
+      addSuccess();
     }
 
     actions.resetForm();
@@ -30,7 +39,7 @@ const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{ name: "", phone: "" }}
+      initialValues={{ name: "", number: "" }}
       onSubmit={handleSubmit}
       validationSchema={ContactSchema}
     >
@@ -42,11 +51,13 @@ const ContactForm = () => {
         <ErrorMessage name="name" as="span" className={css.error} />
         <div>
           <p>Number</p>
-          <Field type="number" name="phone" className={css.input} />
+          <Field type="text" name="number" className={css.input} />
         </div>
+        <ErrorMessage name="number" as="span" className={css.error} />
         <button type="submit" className={css.button}>
           Add contact
         </button>
+        <Toaster />
       </Form>
     </Formik>
   );

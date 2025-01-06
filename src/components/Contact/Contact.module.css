@@ -1,11 +1,14 @@
 .contactDiv {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid rgb(51, 42, 154);
   width: 320px;
   border-radius: 8px;
   justify-content: space-between;
   padding: 5px;
   align-items: center;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  background-color: whitesmoke;
 }
 
 .person {
@@ -16,4 +19,12 @@
 
 .buttonDelete {
   height: 25px;
+  background-color: inherit;
+  border: 1px solid rgb(51, 42, 154);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background-color: rgb(204, 204, 239);
 }

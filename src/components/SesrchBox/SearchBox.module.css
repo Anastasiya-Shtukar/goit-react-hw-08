@@ -1,3 +1,33 @@
 .searchBox {
   margin: 15px auto;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgb(51, 42, 154);
+  border-radius: 5px;
+  background-color: white;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.input {
+  cursor: pointer;
+  border: 1px solid rgb(51, 42, 154);
+}
+
+.input:hover {
+  background-color: whitesmoke;
+  border: 1px solid rgb(51, 42, 154);
+}
+
+.input:focus-within {
+  background-color: whitesmoke;
+  border: 1px solid rgb(51, 42, 154);
 }
