@@ -4,7 +4,7 @@ import RegisterForm from "../components/RegisterForm/RegisterForm";
 export default function Register() {
   return (
     <>
-      <DocumentTitle>Login</DocumentTitle>
+      <DocumentTitle>Register</DocumentTitle>
       <RegisterForm />
     </>
   );
