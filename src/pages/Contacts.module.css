@@ -3,5 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+}
+
+h1 {
+  color: rgb(51, 42, 154);
 }

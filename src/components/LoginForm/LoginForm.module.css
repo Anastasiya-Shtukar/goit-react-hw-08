@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+  gap: 20px;
+}
+
+.button {
+  height: 25px;
+  background-color: inherit;
+  border: 1px solid rgb(51, 42, 154);
+  border-radius: 5px;
+  cursor: pointer;
+}
