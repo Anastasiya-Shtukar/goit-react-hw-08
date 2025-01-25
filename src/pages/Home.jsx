@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <DocumentTitle>Home</DocumentTitle>
-      <div className={css.home}>Home</div>
+      <div className={css.home}>Welcome to my contacts app</div>
     </>
   );
 }
