@@ -12,15 +12,8 @@ export default function RegisterForm() {
   };
 
   return (
-    <Formik
-      initialValues={{ email: "", password: "", name: "" }}
-      onSubmit={handleSubmit}
-    >
+    <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <Form className={css.form}>
-        <div>
-          <p>Name</p>
-          <Field type="text" name="name" />
-        </div>
         <div>
           <p>Email</p>
           <Field type="email" name="email" />
@@ -30,7 +23,7 @@ export default function RegisterForm() {
           <Field type="password" name="password" />
         </div>
         <button type="submit" className={css.button}>
-          Login
+          Register
         </button>
       </Form>
     </Formik>

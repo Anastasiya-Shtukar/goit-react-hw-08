@@ -1,5 +1,5 @@
 import ContactForm from "../components/ContactForm/ContactForm.jsx";
-import SearchBox from "../components/SesrchBox/SearchBox.jsx";
+import SearchBox from "../components/SearchBox/SearchBox.jsx";
 import ContactList from "../components/ContactList/ContactList.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";

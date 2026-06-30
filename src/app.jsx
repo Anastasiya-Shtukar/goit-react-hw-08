@@ -5,7 +5,7 @@ import { lazy, useEffect } from "react";
 import RestrictedRoute from "./components/RestrictedRoute.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import { useDispatch, useSelector } from "react-redux";
-//import { refreshUser } from "./redux/operations.js";
+import { refreshUser } from "./redux/operations.js";
 import { selectRefreshUser } from "./redux/selectors.js";
 
 const HomePage = lazy(() => import("./pages/Home.jsx"));
@@ -14,7 +14,7 @@ const LoginPage = lazy(() => import("./pages/Login.jsx"));
 const RegisterPage = lazy(() => import("./pages/Register.jsx"));
 
 export function App() {
-  /*const isRefreshUser = useSelector(selectRefreshUser);
+  const isRefreshUser = useSelector(selectRefreshUser);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(refreshUser());
@@ -22,7 +22,7 @@ export function App() {
 
   if (isRefreshUser) {
     return <p>refreshing...</p>;
-  }*/
+  }
 
   return (
     <Layout>

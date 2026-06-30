@@ -14,7 +14,7 @@ export default function UserNav() {
 
   return (
     <div className={css.div}>
-      <p className={css.welcome}>Welcome, {user.name}</p>
+      <p className={css.welcome}>Welcome, {user.email}</p>
       <button className={css.button} onClick={() => dispatch(logOut())}>
         Logout
       </button>
